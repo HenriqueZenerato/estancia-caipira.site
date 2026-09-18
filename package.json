@@ -1,0 +1,15 @@
+{
+  "name": "estancia-caipira-rio-preto",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "lint": "node scripts/quality.mjs lint",
+    "typecheck": "node --check script.js && node --check scripts/quality.mjs && node --check scripts/build.mjs && node --check scripts/serve.mjs",
+    "test": "node scripts/quality.mjs test",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "motion": "^13.3.0"
+  }
+}
