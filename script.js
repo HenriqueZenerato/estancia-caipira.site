@@ -62,13 +62,14 @@ if (!prefersReducedMotion.matches && window.Motion) {
 
   const reveal = (target, options = {}) => {
     const elements = typeof target === "string" ? document.querySelectorAll(target) : target;
-    const { distance = 24, duration = 0.7, delay = 0, amount = 0.26, clip = false } = options;
+    const { distance = 24, duration = 0.7, delay = 0, amount = 0.26, clip = false, scale = 1 } = options;
 
     inView(elements, (element) => {
       if (revealed.has(element)) return;
       revealed.add(element);
 
       const keyframes = { opacity: [0, 1], y: [distance, 0] };
+      if (scale !== 1) keyframes.scale = [scale, 1];
       if (clip) keyframes.clipPath = ["inset(0 0 7% 0)", "inset(0)"];
 
       animate(element, keyframes, { duration, delay, ease });
@@ -97,9 +98,9 @@ if (!prefersReducedMotion.matches && window.Motion) {
   }
 
   const heroSequence = [
-    [".hero h1", 0.12, 0.82],
-    [".hero-lead", 0.3, 0.62],
-    [".hero-actions", 0.43, 0.56]
+    [".hero h1", 0.14, 0.88],
+    [".hero-lead", 0.34, 0.68],
+    [".hero-actions", 0.52, 0.58]
   ];
 
   heroSequence.forEach(([selector, delay, duration]) => {
@@ -118,7 +119,7 @@ if (!prefersReducedMotion.matches && window.Motion) {
     animate(
       heroMedia,
       { opacity: [0, 1], y: [28, 0], scale: [0.992, 1], clipPath: ["inset(0 0 8% 0)", "inset(0)"] },
-      { duration: 0.84, delay: 0.54, ease }
+      { duration: 0.92, delay: 0.62, ease }
     );
     window.setTimeout(() => heroMedia.classList.add("is-framed"), 640);
   }
@@ -130,26 +131,27 @@ if (!prefersReducedMotion.matches && window.Motion) {
   reveal(".flavours-heading h2", { distance: 22, duration: 0.7 });
   reveal(".flavours-heading > p:last-child", { distance: 16, duration: 0.58, delay: 0.08 });
   revealDecoration(".flavours-heading");
-  reveal(".buffet-frame", { distance: 20, duration: 0.78, clip: true });
+  reveal(".buffet-frame", { distance: 22, duration: 0.82, clip: true, scale: 0.978 });
   reveal(".service-story-main", { distance: 18, duration: 0.62, delay: 0.1 });
 
   reveal(".pizza-feature .service-story-accent", { distance: 22, duration: 0.68 });
-  reveal(".pizza-frame", { distance: 22, duration: 0.8, delay: 0.1, clip: true });
-  reveal(".pizza-detail", { distance: 14, duration: 0.58, delay: 0.2 });
+  reveal(".pizza-frame", { distance: 24, duration: 0.84, delay: 0.1, clip: true, scale: 0.978 });
+  reveal(".pizza-detail", { distance: 16, duration: 0.62, delay: 0.22, scale: 0.985 });
   reveal(".rooster-signature", { distance: 10, duration: 0.5, delay: 0.08, amount: 0.45 });
   revealDecoration(".pizza-feature", 0.3);
 
   reveal(".experience-quote", { distance: 22, duration: 0.7 });
-  reveal(".room-frame", { distance: 20, duration: 0.78, clip: true });
-  reveal(".brand-frame", { distance: 14, duration: 0.64, delay: 0.12 });
+  reveal(".room-frame", { distance: 22, duration: 0.82, clip: true, scale: 0.978 });
+  reveal(".brand-frame", { distance: 16, duration: 0.66, delay: 0.14, scale: 0.985 });
 
   reveal(".social-proof .rating-number", { distance: 18, duration: 0.62, amount: 0.35 });
   reveal(".social-proof h2, .social-proof .price-note", { distance: 14, duration: 0.56, delay: 0.06, amount: 0.35 });
   reveal(".information-heading", { distance: 20, duration: 0.68 });
   reveal(".hours", { distance: 16, duration: 0.62, delay: 0.08 });
   reveal(".contact-strip", { distance: 12, duration: 0.54, amount: 0.32 });
-  reveal(".brand-signature", { distance: 10, duration: 0.54, amount: 0.45 });
-  reveal(".final-cta h2, .final-cta .button", { distance: 14, duration: 0.58, delay: 0.08, amount: 0.45 });
+  reveal(".brand-signature", { distance: 8, duration: 0.62, amount: 0.45, scale: 0.96 });
+  reveal(".final-cta h2", { distance: 16, duration: 0.68, delay: 0.12, amount: 0.45 });
+  reveal(".final-cta .button", { distance: 12, duration: 0.54, delay: 0.22, amount: 0.45 });
 
   const controls = document.querySelectorAll(".button, .header-cta");
   controls.forEach((control) => {

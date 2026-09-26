@@ -1382,13 +1382,17 @@ h2 {
   display: grid;
   grid-template-columns: minmax(32px, 62px) auto minmax(32px, 62px);
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
 .brand-signature > span {
   height: 1px;
-  background: rgba(169, 71, 43, 0.42);
+  background: linear-gradient(90deg, transparent, rgba(169, 71, 43, 0.5));
+}
+
+.brand-signature > span:last-child {
+  background: linear-gradient(90deg, rgba(169, 71, 43, 0.5), transparent);
 }
 
 .button-dark {
@@ -1412,9 +1416,13 @@ h2 {
 }
 
 .brand-seal {
-  width: 116px;
-  height: 116px;
+  display: block;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(34%) saturate(1072%) hue-rotate(333deg) brightness(91%) contrast(88%);
 }
 
 .site-footer {
@@ -1902,12 +1910,12 @@ h2 {
 
   .brand-signature {
     grid-template-columns: 30px auto 30px;
-    gap: 10px;
+    gap: 14px;
   }
 
   .brand-seal {
-    width: 98px;
-    height: 98px;
+    width: 76px;
+    height: 76px;
   }
 
   .site-footer {
