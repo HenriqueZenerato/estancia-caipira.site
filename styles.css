@@ -32,11 +32,7 @@
   --green-wash:
     radial-gradient(ellipse at 12% 22%, rgba(35, 84, 56, 0.58), transparent 46%),
     radial-gradient(ellipse at 90% 80%, rgba(217, 161, 46, 0.055), transparent 34%);
-<<<<<<< HEAD
   --rural-ornament-dark: url("assets/rural-ornament-dark.jpg");
-=======
-  --rural-ornament-dark: url("assets/rural-ornament-dark.jpg");
->>>>>>> origin/main
   --corner-frame:
     linear-gradient(currentColor, currentColor) left top / 72px 1px no-repeat,
     linear-gradient(currentColor, currentColor) left top / 1px 72px no-repeat,
@@ -270,19 +266,11 @@ h2 {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .desktop-nav a {
   position: relative;
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-=======
-.desktop-nav a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
->>>>>>> origin/main
 }
 
 .desktop-nav a::after {
@@ -302,19 +290,11 @@ h2 {
   transform: scaleX(1);
 }
 
-<<<<<<< HEAD
 .header-cta {
   justify-self: end;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-=======
-.header-cta {
-  justify-self: end;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
->>>>>>> origin/main
   min-height: 44px;
   padding: 11px 17px;
   color: var(--coffee);
@@ -657,7 +637,6 @@ h2 {
   background-color: var(--paper);
   background-image: var(--paper-wash);
   transform: translateX(-50%);
-<<<<<<< HEAD
 }
 
 .welcome::after {
@@ -673,23 +652,6 @@ h2 {
 .welcome > *:not(.transition-wheel) {
   position: relative;
   z-index: 1;
-=======
-}
-
-.welcome::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  pointer-events: none;
-  background: var(--rural-ornament-dark) 7% 18% / max(980px, 70vw) auto no-repeat;
-  opacity: 0.045;
-}
-
-.welcome > *:not(.transition-wheel) {
-  position: relative;
-  z-index: 1;
->>>>>>> origin/main
 }
 
 .brand-ornament {
@@ -1522,13 +1484,8 @@ h2 {
     background: var(--coffee-soft);
     border: 1px solid rgba(242, 230, 207, 0.16);
     box-shadow: 0 16px 34px rgba(18, 8, 4, 0.24);
-<<<<<<< HEAD
     opacity: 0;
     visibility: hidden;
-=======
-    opacity: 0;
-    visibility: hidden;
->>>>>>> origin/main
     transform: translateY(-8px);
     pointer-events: none;
     transition: opacity 180ms ease, transform 180ms var(--ease-out), visibility 180ms ease;
@@ -1546,13 +1503,8 @@ h2 {
   }
 
   .site-header.menu-open .desktop-nav {
-<<<<<<< HEAD
     opacity: 1;
     visibility: visible;
-=======
-    opacity: 1;
-    visibility: visible;
->>>>>>> origin/main
     transform: translateY(0);
     pointer-events: auto;
   }
@@ -1741,7 +1693,6 @@ h2 {
     bottom: 50px;
   }
 
-<<<<<<< HEAD
   .flavours-heading {
     padding: 90px 18px;
   }
@@ -1754,20 +1705,6 @@ h2 {
   .buffet-frame {
     min-height: clamp(540px, 166vw, 650px);
     height: clamp(540px, 166vw, 650px);
-=======
-  .flavours-heading {
-    padding: 90px 18px;
-  }
-
-  .flavours {
-    grid-template-columns: 1fr;
-  }
-
-  .buffet-feature,
-  .buffet-frame {
-    min-height: clamp(540px, 166vw, 650px);
-    height: clamp(540px, 166vw, 650px);
->>>>>>> origin/main
   }
 
   .buffet-frame::after {
@@ -1905,7 +1842,6 @@ h2 {
     border-left: 0;
   }
 
-<<<<<<< HEAD
   .information {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -1913,15 +1849,6 @@ h2 {
 
   .information-heading {
     padding: 100px 18px 66px;
-=======
-  .information {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-  }
-
-  .information-heading {
-    padding: 100px 18px 66px;
->>>>>>> origin/main
   }
 
   .information-heading h2 {
